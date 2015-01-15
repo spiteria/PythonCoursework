@@ -1,0 +1,22 @@
+'''
+Created on Sep 30, 2014
+
+@author: AndrewSpiteri
+'''
+from random import randrange
+import math
+
+def main():
+    n, m = 1000, 0
+    x, y = [None] * 1000, [None]*1000
+    for i in range(0, 1000):
+        x, y = randrange(0,101), randrange(0,101)
+        x, y = x/100, y/100
+        d = math.sqrt(x**2 + y**2)
+        if d <= 1:
+            m = m + 1
+    rho = m / n
+    pie = rho * 4
+    print("An approximation of the value of pi is: ",pie)
+    
+main()
